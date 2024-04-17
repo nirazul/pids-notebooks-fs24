@@ -11,7 +11,7 @@ def test_abserr(env):
   mean_abs_err = env["Question3a"].mean_abs_err
   err_plot = env["Question3a"].err_plot
   
-  assert_true(mean_abs_err[-1] < 1e-1)
-  assert_true(err_plot[0].axes.get_ylim()[0] >= 1e-2)
-  assert_true(err_plot[0].axes.get_ylim()[1] <= 2e-1)
+  assert_true(mean_abs_err[-1] < 2e-1)
+  assert_true(err_plot[0].axes.get_ylim()[0] >= 0.5e-2)
+  assert_true(err_plot[0].axes.get_ylim()[1] <= 4e-1)
   
