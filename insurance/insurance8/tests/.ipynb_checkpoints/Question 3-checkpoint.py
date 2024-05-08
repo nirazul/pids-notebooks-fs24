@@ -9,7 +9,9 @@ points = 1
 
 @test_case()
 def test_subplots(env):
-    p_value = env["Question3"].p_value
-    lb = 0.02
-    ub = 0.25
-    assert_true(lb < p_value < ub)
+    fsp = env["Question3"].female_survival_prob
+    tfsp = 0.69
+    r = random.randint(1, 100000)
+    assert(tfsp - 0.02 < fsp < tfsp + 0.02 )
+    
+
