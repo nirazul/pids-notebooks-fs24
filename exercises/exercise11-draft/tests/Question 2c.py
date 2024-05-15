@@ -4,15 +4,15 @@ import numpy as np
 import pandas as pd
 
 OK_FORMAT = False
-name = "Question 3b"
+name = "Question 2c"
 points = 2
 @test_case()
 def test_q2a(env):
-   X = env["Question3b"].X_nonan
-   y = env["Question3b"].y_nonan
-   assert_equal((1308, 4), X.shape)
-   assert_equal((1308, ), y.shape)
+   gs = env["Question2c"].grid_search
+
+   assert_true('relu' in gs.best_params_.values()) 
+   assert_true((10,) in gs.best_params_.values()) 
+
       
-  
   
   

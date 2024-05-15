@@ -4,15 +4,13 @@ import numpy as np
 import pandas as pd
 
 OK_FORMAT = False
-name = "Question 3b"
+name = "Question 3a"
 points = 2
 @test_case()
 def test_q2a(env):
-   X = env["Question3b"].X_nonan
-   y = env["Question3b"].y_nonan
-   assert_equal((1308, 4), X.shape)
-   assert_equal((1308, ), y.shape)
-      
+   xc = env["Question3a"].X_cleaned
+   assert_true(xc.shape == (1309, 4))
+   assert_equal(28, len(xc["boat"].unique()))      
   
   
   
